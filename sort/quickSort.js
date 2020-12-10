@@ -5,7 +5,7 @@ exports.quickSort = void 0;
 // 返回p，使得arr[l, p-1] < arr[p]; arr[p+1, r] > arr[p]
 var partition = function (arr, l, r) {
     var _a, _b, _c;
-    var randomIndex = Math.round(Math.random() * (l - r + 1) + r);
+    var randomIndex = Math.round(Math.random() * (l - r + 1) + r); // 随机化快速排序，使得期望是N(logn)
     _a = [arr[randomIndex], arr[l]], arr[l] = _a[0], arr[randomIndex] = _a[1];
     var v = arr[l];
     // arr[l+1, j] < v ; arr[j+1, i] > v
